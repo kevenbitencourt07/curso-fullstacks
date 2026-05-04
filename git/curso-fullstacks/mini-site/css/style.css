@@ -1,22 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 body {
     background: #f5f5f5;
 }
 
 header {
+    /*Tamanho e Altura*/
+    height: 100px;
     background: #222;
     /*COR DE TEXTO*/
     color: #fff;
     /*FlexBox*/
     display: flex;
+    border-bottom: 5px solid #191970;
+}
+
+.contentHeader {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+header h1 {
+    margin: 20px;
 }
 
 header nav ul a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    padding: 20px;
 }
 
 header nav ul {
     display: flex inline;
+}
+
+header nav ul a:hover {
+    text-decoration: underline;
+    color: orange;
 }
