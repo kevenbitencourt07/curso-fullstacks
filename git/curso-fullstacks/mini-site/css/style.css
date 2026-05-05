@@ -24,6 +24,7 @@ header {
     /*FlexBox*/
     display: flex;
     border-bottom: 5px solid #191970;
+
 }
 
 .contentHeader {
@@ -33,6 +34,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -62,10 +64,19 @@ header nav ul a:hover {
 
 .carousel img {
     border-radius: 10px;
+    width: 100%;
 }
 
 .cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
 }
