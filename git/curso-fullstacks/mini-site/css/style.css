@@ -2,43 +2,39 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
 }
 
 body {
-    background: #f5f5f5;
-}
+    background:  #bebebe;
 
-.contentMain {
-    margin: 0 auto;
-    /*Largura*/
-    max-width: 1000px;
-    width: 100%;
+
 }
 
 header {
-    /*Tamanho e Altura*/
-    height: 100px;
     background: #222;
-    /*COR DE TEXTO*/
     color: #fff;
-    /*FlexBox*/
     display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
     border-bottom: 5px solid #191970;
 
 }
 
-.contentHeader {
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 100%;
+.contenrHeader {
+    background: #222;
+    color: #fff;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
     flex-wrap: wrap;
-}
 
-header h1 {
-    margin: 20px;
+
 }
 
 header nav ul a {
@@ -49,7 +45,8 @@ header nav ul a {
 }
 
 header nav ul {
-    display: flex inline;
+    display: flex;
+
 }
 
 header nav ul a:hover {
@@ -57,26 +54,96 @@ header nav ul a:hover {
     color: orange;
 }
 
-/*carousel*/
+header h1 {
+    margin: 20px;
+}
+
+.contentMain {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
 .carousel article {
     margin-top: 20px;
 }
 
+
 .carousel img {
     border-radius: 10px;
     width: 100%;
+
+
 }
 
 .cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 20px;
+
+
+
+
 }
 
 .card {
     background: #fff;
     padding: 20px;
     margin-bottom: 20px;
+    border: 1px solid grey;
     border-radius: 10px;
-    border: 1px solid gray;
+
+}
+
+.extra {
+    background: #ddd;
+    padding: 30px;
+    text-align: center;
+}
+
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+/*pagina sobre*/
+.paginaSobre h1 {
+    color: #191970;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-bottom: 10px;
+  border: 2px solid blue;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.panel p {
+        line-height: 20px;
+    padding:21px;
 }
