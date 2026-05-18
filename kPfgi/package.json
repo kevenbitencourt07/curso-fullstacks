@@ -1,0 +1,15 @@
+{
+  "name": "kpfgi",
+  "version": "1.0.0",
+  "description": "Esse projeto vai falar sobre Alimentos.",
+  "license": "ISC",
+  "author": "Keven",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
