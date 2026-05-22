@@ -1,3 +1,7 @@
 body {
-    background: red;
+    background: gray;
+}
+
+.container {
+    max-width: 1000px;
 }
