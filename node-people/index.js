@@ -18,6 +18,12 @@ function buscarNomePorId(id) {
     return nomes.filter((nome) => nome.id == id);
 }
 
+// Pegar a posição ou index do elemento do Array por ID
+function buscarIdNomes(id) {
+    // findIndex
+    return nomes.findIndex((nome) => nome?.id == id);
+}
+
 
 // Rota Principal
 app.get("/", (req, res) => {
@@ -48,8 +54,21 @@ app.post("/listaNomes", (req, res) => {
 
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor rodando no enndereço http://localhost:${PORT}`)
+// Criando Rota Excluir
+app.delete("/listaNomes/:id", (req, res) => {
+   let id = req.params.id;
+   let index = buscarIdNomes(id);
+
+   // Se naõ encontrar, retornar erro
+    if(index === -1) {
+        return res.status(404).send(`Nenhum nome com id ${id} foi encontrado`);
+    }
+
+   // Splice
+    nomes.splice(index, 1);
+    return res.send(`Nomes com id ${req.params.id} excluída com sucesso!`);
 });
 
-
+app.listen(PORT, () => {
+    console.log(`Servidor rodando no enndereço http://localhost:${PORT}`);
+});
