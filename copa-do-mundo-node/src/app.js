@@ -20,4 +20,46 @@ app.get('/selecoes', (req, res) => {
     });
 });
 
+// Buscando por ID
+app.get('/selecoes/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = "select * from selecoes where id=?";
+
+    conexao.query(sql, id, (erro, result) => {
+        res.json(result[0]);
+    });
+});
+
+
+// Criando POST para cadastrar
+app.post('/selecoes', (req, res) => {
+    const selecoes = req.body;
+    const sql = "insert into selecoes SET?";
+
+    conexao.query(sql, selecoes, () => {
+        res.json({ mensagem: "Cadastrado com sucesso!" });
+    });
+});
+
+// Deletando registro
+app.delete('/selecoes/:id', (req, res) => {
+    const id = req.params.id;
+    const sql = "delete from selecoes where id=?";
+
+    conexao.query(sql, id, () => {
+        res.json({ mensagem: "Deletado com sucesso!" })
+    });
+});
+
+// Atualizando registro
+app.put('/selecoes/:id', (req, res) => {
+    const id = req.params.id
+    const selecao = req.body
+    const sql = "update selecoes set ? where id=?";
+
+    conexao.query(sql, [selecao, id], () => {
+        res.json({ mensagem: "Atualizado com sucesso!" });
+    });
+});
+
 export default app;
